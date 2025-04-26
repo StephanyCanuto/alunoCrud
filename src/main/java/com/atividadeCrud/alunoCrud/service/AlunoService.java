@@ -12,24 +12,24 @@ public class AlunoService {
 
     private final AlunoRepository _repository;
 
-    public AlunoService(AlunoRepository repository){
+    public AlunoService(AlunoRepository repository) {
         this._repository = repository;
     }
 
-   public List<Aluno> listarTodos(){
+    public List<Aluno> listarTodos() {
         return _repository.findAll();
-   }
+    }
 
-   public Aluno salvarAluno(Aluno aluno){
+    public Aluno salvarAluno(Aluno aluno) {
         return _repository.save(aluno);
-   }
+    }
 
-   public void deletar(Long id){
+    public void deletar(Long id) {
         _repository.deleteById(id);
-   }
+    }
 
-   public Aluno buscarById(Long id){
+    public Aluno buscarById(Long id) {
         return _repository.findById(id).orElse(null);
-   }
+    }
 
 }

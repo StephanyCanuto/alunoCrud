@@ -12,9 +12,9 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
-    private String email;
-    private String telefone;
+    private String nomeAluno;
+    private String emailAluno;
+    private String telefoneAluno;
 
     public Long getId() {
         return id;
@@ -24,27 +24,27 @@ public class Aluno {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeAluno() {
+        return nomeAluno;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeAluno(String nomeAluno) {
+        this.nomeAluno = nomeAluno;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailAluno() {
+        return emailAluno;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailAluno(String emailAluno) {
+        this.emailAluno = emailAluno;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getTelefoneAluno() {
+        return telefoneAluno;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setTelefoneAluno(String telefoneAluno) {
+        this.telefoneAluno = telefoneAluno;
     }
 }
