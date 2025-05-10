@@ -16,32 +16,34 @@ public class AlunoController {
     }
 
     @GetMapping
-    public List<Aluno> listar() {
+    public List<Aluno> listarAlunos() {
         return _alunoService.listarTodos();
     }
 
     @PostMapping
-    public Aluno criar(@RequestBody Aluno aluno) {
+    public Aluno criarAluno(@RequestBody Aluno aluno) {
         return _alunoService.salvarAluno(aluno);
     }
 
     @GetMapping("/{id}")
-    public Aluno buscar(@PathVariable Long id) {
+    public Aluno buscarAlunoPorId(@PathVariable Long id) {
         return _alunoService.buscarById(id);
     }
 
     @PutMapping("/{id}")
-    public Aluno atualizar(@PathVariable Long id, @RequestBody Aluno novoAluno) {
+    public Aluno atualizarAluno(@PathVariable Long id, @RequestBody Aluno alunoAlterado) {
         Aluno alunoExistente = _alunoService.buscarById(id);
         if (alunoExistente == null) return null;
-        alunoExistente.setNomeAluno(novoAluno.getNomeAluno());
-        alunoExistente.setEmailAluno(novoAluno.getEmailAluno());
-        alunoExistente.setTelefoneAluno(novoAluno.getTelefoneAluno());
-        return _alunoService.salvarAluno(alunoExistente);
+        alunoExistente.setNomeAluno(alunoAlterado.getNomeAluno());
+        alunoExistente.setEmailAluno(alunoAlterado.getEmailAluno());
+        alunoExistente.setTelefoneAluno(alunoAlterado.getTelefoneAluno());
+        return _alunoService.salvarAluno(alunoAlterado);
     }
 
+
+
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable Long id) {
+    public void deletarAluno(@PathVariable Long id) {
         _alunoService.deletar(id);
     }
 }
