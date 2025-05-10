@@ -1,9 +1,8 @@
 package com.atividadeCrud.alunoCrud.controller;
 
 
-import com.atividadeCrud.alunoCrud.model.Aluno;
+
 import com.atividadeCrud.alunoCrud.model.Professor;
-import com.atividadeCrud.alunoCrud.service.AlunoService;
 import com.atividadeCrud.alunoCrud.service.ProfessorService;
 import org.springframework.web.bind.annotation.*;
 
